@@ -56,6 +56,7 @@ This project is for educational and portfolio purposes. No real user data is inc
 
 ---
 ## 📂 Project Structure
+```
 game-sales-fabric-pipeline/
 ├── 1_bronze/                 # Raw ingestion layer (Lakehouse, pipelines, scripts)
 │   ├── Scripts/              # Notebooks for ingestion and SLA logging
@@ -88,7 +89,7 @@ game-sales-fabric-pipeline/
 ├── LICENSE
 ├── README.md
 
-
+```
 ## 📊 Dashboard Preview
 
 <img src="5_dashboard/steam_dashboard.png" width="1000"/>
@@ -105,7 +106,6 @@ game-sales-fabric-pipeline/
 ## 👤 Author
 
 **Abdelrhman Eldesoky**  
-New Cairo, Egypt  
 Email: abdelrhmaneldesoky@gmail.com  
 GitHub: [github.com/desoky231](https://github.com/desoky231)  
 LinkedIn: [linkedin.com/in/abdelrhman-eldesoky](https://www.linkedin.com/in/abdelrhman-eldesoky-09743a1b4/)
