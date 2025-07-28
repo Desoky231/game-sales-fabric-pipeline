@@ -1,0 +1,7 @@
+﻿source_table,src_type,db_type,db_name,source_path,target_table,target_path,incremental_column
+games,sql,amazon_pg,steam,,games,/Tables/staging/,NO
+orders,sql,amazon_pg,steam,,orders,/Tables/staging/,NO
+order_items,sql,amazon_pg,steam,,order_items,/Tables/staging/,NO
+promotions,sql,amazon_pg,steam,,promotions,/Tables/staging/,NO
+profiles,sql,amazon_pg,steam,,profiles,/Tables/staging/,NO
+wishlist,sql,amazon_pg,steam,,wishlist,/Tables/staging/,NO

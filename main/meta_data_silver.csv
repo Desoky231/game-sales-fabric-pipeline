@@ -1,0 +1,44 @@
+﻿source_table,column,PK,FK,NON_NULLABLE,UNIQUE,NORMALIZE2NF,NORMALIZE3NF,DTYPE,RULES
+games,appid,1,0,0,1,0,0,INT,
+games,name,0,0,0,0,0,0,STRING,
+games,Release date,0,0,0,0,0,0,DATE|d-MMM-yy,
+games,Estimated owners,0,0,0,0,0,0,STRING,
+games,Required age,0,0,0,0,0,0,INT,
+games,price,0,0,0,0,0,0,FLOAT|2,
+games,About the game,0,0,0,0,0,0,STRING,
+games,recommendations,0,0,0,0,0,0,INT,
+games,developers,0,0,0,0,0,1,STRING,developer_clean
+games,publishers,0,0,0,0,0,1,STRING,publisher_clean
+games,categories,0,0,0,0,0,1,STRING,
+games,genres,0,0,0,0,0,1,STRING,
+orders,order_id,1,0,1,0,0,0,STRING,
+orders,steamid64,1,0,1,0,0,0,INT,
+orders,order_date,0,0,1,0,0,0,DATE|yyyy-MM-dd,
+orders,amount,0,0,1,0,0,0,FLOAT|2,range|0|inf
+orders,taxes,0,0,1,0,0,0,FLOAT|2,range|0|inf
+orders,amount_paid,0,0,1,0,0,0,FLOAT|2,range|0|inf
+orders,order_status,0,0,1,0,1,0,STRING,
+orders,purchase_type,0,0,1,0,1,0,STRING,
+orders,card_number,0,0,0,0,0,0,INT,
+order_items,order_id,1,0,1,0,0,0,STRING,
+order_items,steamid64,1,0,1,0,0,0,INT,
+order_items,appid,1,0,1,0,0,0,INT,
+order_items,paidamount,0,0,0,0,0,0,FLOAT|2,range|0|inf
+order_items,date,0,0,0,0,0,0,DATE|yyyy-MM-dd,
+profiles,first_name,0,0,0,0,0,0,STRING,
+profiles,last_name,0,0,0,0,0,0,STRING,
+profiles,nationality,0,0,0,0,0,0,STRING,normalize_alpha
+profiles,profile_name,0,0,0,1,0,0,STRING,
+profiles,date_of_birth,0,0,0,0,0,0,DATE|yyyy-MM-dd,
+profiles,steamid64,1,0,1,1,0,0,INT,
+profiles,phone,0,0,0,0,0,0,STRING,
+profiles,email,0,0,0,1,0,0,STRING,email
+promotions,promotion_id,1,0,1,1,0,0,STRING,promotions_clean
+promotions,game_id,0,1,1,0,0,0,INT,
+promotions,name,0,0,0,0,0,0,STRING,
+promotions,percentage,0,0,1,0,0,0,INT,range|0|100
+promotions,start_date,0,0,1,0,0,0,DATE|yyyy-MM-dd,date_in_past_or_today
+promotions,end_date,0,0,1,0,0,0,DATE|yyyy-MM-dd,"date_in_past_or_today,date_after[start_date]"
+wishlist,user_id,1,1,1,0,0,0,STRING,
+wishlist,game_id,1,1,1,0,0,0,INT,
+wishlist,wishlist_date,0,0,1,0,0,0,DATE|yyyy-MM-dd,date_in_past_or_today
